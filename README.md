@@ -50,3 +50,14 @@ re-petir provides a repeating web component.  It extends [i-bid](https://github.
     }, 10000);
 </script>
 ```
+
+## Viewing the component locally
+
+1.  Install git
+2.  Clone or fork repo https://github.com/bahrus/repetir
+3.  Install node
+4.  Open command window from cloned location of step 2.
+5.  Run command "npm run install"
+6.  Run command "npm run serve"
+7.  Open browser to http://localhost:3030/demo/dev
+
