@@ -10,6 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/bahrus/repetir.git"
   },
+  "dependencies": {
+    "@github/template-parts": "0.3.2",
+    "ib-id": "0.0.22"
+  },
+  "devDependencies": {
+    "xtal-test": "0.0.50"
+  },
   "author": "",
   "license": "MIT",
   "bugs": {
