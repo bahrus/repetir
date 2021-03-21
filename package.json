@@ -2,9 +2,11 @@
   "name": "repetir",
   "description": "",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "re-petir.js",
+  "module": "re-petir.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "package-check": "package-check",
     "serve": "node node_modules/xtal-test/serve.js"
   },
   "repository": {
@@ -17,9 +19,25 @@
     "trans-render": "0.0.280"
   },
   "devDependencies": {
+    "@skypack/package-check": "0.2.2",
     "xtal-test": "0.0.50"
   },
-  "author": "",
+  "files": [
+    "re-petir.*",
+    "types.d.ts"
+  ],
+  "typings": "types.d.ts",
+  "exports": {
+    ".": "./re-petir.js",
+    "./re-petir.js": "./re-petir.js"
+  },
+  "keywords": [
+    "webcomponents",
+    "web_components",
+    "repeater",
+    "templates"
+  ],
+  "author": "bahrus <anderson.bruce.b@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bahrus/repetir/issues"
