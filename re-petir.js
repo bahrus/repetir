@@ -5,6 +5,7 @@ import { upShadowSearch } from 'trans-render/lib/upShadowSearch.js';
 export class RePetir extends IBid {
     constructor() {
         super(...arguments);
+        this.propActions = propActions;
         this.templateInstances = new WeakMap();
     }
     updateLightChildren(element, item, idx) {
@@ -21,13 +22,16 @@ export class RePetir extends IBid {
             tpl.update(item);
         }
     }
+    connectedCallback() {
+        xc.hydrate(this, slicedPropDefs);
+        super.connectedCallback();
+    }
 }
 RePetir.is = 're-petir';
-const templatesManaged = ({ templateMapIds: templateRefs, self }) => {
-    const templateIds = typeof templateRefs === 'string' ? [templateRefs] : templateRefs;
+const templatesManaged = ({ templateMapIds, self }) => {
     const templateInstances = {};
-    for (const key in templateRefs) {
-        const templateId = templateRefs[key];
+    for (const key in templateMapIds) {
+        const templateId = templateMapIds[key];
         const referencedTemplate = upShadowSearch(self, templateId);
         if (referencedTemplate === null) {
             throw `Template with id ${templateId} not found.`;
